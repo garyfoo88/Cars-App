@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import NavBar from "../../components/navBar";
+import TopSection from "./topSection";
 
 const PageContainer = styled.div`
   ${tw`flex
@@ -17,6 +18,7 @@ function HomePage() {
   return (
     <PageContainer>
       <NavBar />
+      <TopSection />
     </PageContainer>
   );
 }
