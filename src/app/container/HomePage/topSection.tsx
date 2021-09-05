@@ -4,9 +4,10 @@ import tw from "twin.macro";
 import McLarenCarImg from "../../../assets/images/mclaren-orange-big.png";
 import BlobImg from "../../../assets/images/blob.svg";
 import { SCREENS } from "../../components/responsive";
+import Button from "../../components/button";
 
 const TopSectionContainer = styled.div`
-  min-height: 600px;
+  min-height: 400px;
   margin-top: 6em;
   ${tw`w-full max-w-screen-2xl flex justify-between pl-3 pr-3 lg:pl-12 lg:pr-12 `}
 `;
@@ -128,6 +129,14 @@ const StandaloneCar = styled.div`
   }
 `;
 
+const ButtonsContainer = styled.div`
+  ${tw`
+    flex
+    flex-wrap
+    mt-4
+`}
+`;
+
 function TopSection() {
   return (
     <TopSectionContainer>
@@ -139,6 +148,10 @@ function TopSection() {
           dignissimos aliquid temporibus autem ducimus unde voluptates sapiente
           minima obcaecati dolorum?
         </Description>
+        <ButtonsContainer>
+          <Button text="Book Your Ride" theme="outlined" />
+          <Button text="Sell Your Car" theme="filled" />
+        </ButtonsContainer>
       </LeftContainer>
       <RightContainer>
         <BlobContainer>

@@ -14,7 +14,7 @@ const BaseButton = styled.div`
     pt-3
     pb-3
     outline-none
-    rounded-b-md
+    rounded-md
     text-white
     text-xs
     font-semibold
@@ -50,9 +50,13 @@ const FilledButton = styled(BaseButton)`
 `;
 
 function Button(props: IButtonProps) {
-  const { theme } = props;
+  const { theme, text } = props;
 
-  return <div></div>;
+  if (theme === "outlined") {
+    return <OutlinedButton>{text}</OutlinedButton>;
+  } else {
+    return <FilledButton>{text}</FilledButton>;
+  }
 }
 
 export default Button;
