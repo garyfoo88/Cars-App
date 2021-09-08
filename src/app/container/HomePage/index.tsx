@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
 import BookCard from "../../components/bookCard";
+import Footer from "../../components/footer";
 import { Marginer } from "../../components/marginer";
 import NavBar from "../../components/navBar";
 import AboutUs from "./aboutUs";
@@ -32,6 +33,7 @@ function HomePage() {
       <AboutUs />
       <Marginer direction="vertical" margin="5em" />
       <TopCars />
+      <Footer />
     </PageContainer>
   );
 }
